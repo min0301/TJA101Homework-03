@@ -9,24 +9,25 @@ public class Hw31 {
 		Hw31 a =new Hw31();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("請輸入三角形第一個邊長");
+		System.out.print("請輸入三角形邊長1：");
+		// 檢查輸入文字是否為int
 		while (!sc.hasNextInt()) {
-			System.out.println("輸入不為正整數 請重新輸入");
+			System.out.print("輸入不為整數 請重新輸入邊長1：");
 			sc.next();
 		}
 		int data1 = sc.nextInt();
 		
-		System.out.println("請輸入三角形第二個邊長");
+		System.out.print("請輸入三角形邊長2：");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("輸入不為正整數 請重新輸入");
+			System.out.print("輸入不為整數 請重新輸入邊長2：");
 		}
 		int data2 = sc.nextInt();
 		
-		System.out.println("請輸入三角形第三個邊長");
+		System.out.print("請輸入三角形邊長3：");
 		while (!sc.hasNextInt()) {
 			sc.next();
-			System.out.println("輸入不為正整數 請重新輸入");
+			System.out.print("輸入不為整數 請重新輸入邊長3：");
 		}
 		
 		int data3 = sc.nextInt();
