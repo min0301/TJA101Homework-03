@@ -6,29 +6,46 @@ import java.util.Scanner;
 public class Hw31 {
 	public static void main(String[] args) {
 		
-		
 		Hw31 a =new Hw31();
-		
-		System.out.println("請輸入數字 用空格區隔");
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("請輸入三角形第一個邊長");
+		while (!sc.hasNextInt()) {
+			System.out.println("輸入不為正整數 請重新輸入");
+			sc.next();
+		}
 		int data1 = sc.nextInt();
+		
+		System.out.println("請輸入三角形第二個邊長");
+		while (!sc.hasNextInt()) {
+			sc.next();
+			System.out.println("輸入不為正整數 請重新輸入");
+		}
 		int data2 = sc.nextInt();
+		
+		System.out.println("請輸入三角形第三個邊長");
+		while (!sc.hasNextInt()) {
+			sc.next();
+			System.out.println("輸入不為正整數 請重新輸入");
+		}
+		
 		int data3 = sc.nextInt();
-		int[] b = {data1,data2,data3};
-		a.Triangle(b);
+		
+		int[] sideLength = {data1,data2,data3};
+		a.Triangle(sideLength);
+		sc.close();
 		
 	}
 
-	public void Triangle(int c[]) {
-		Arrays.sort(c);
-		if(c[0] == 0) {
+	public void Triangle(int sl[]) {
+		Arrays.sort(sl);
+		if(sl[0] <= 0) {
 			System.out.println("不是三角形");
-		}else if(c[0] == c[1] && c[0] == c[2]){
+		}else if(sl[0] == sl[1] && sl[0] == sl[2]){
 			System.out.println("正三角形");
-		}else if((Math.pow(c[0], 2)+ Math.pow(c[1], 2)) == Math.pow(c[2], 2)){
+		}else if((Math.pow(sl[0], 2)+ Math.pow(sl[1], 2)) == Math.pow(sl[2], 2)){
 			System.out.println("直角三角形");
-		}else if(c[0] != c[1] && c[0] != c[2]) {
+		}else if(sl[0] != sl[1] && sl[0] != sl[2]) {
 			System.out.println("其他三角形");
 		}
 		else {
