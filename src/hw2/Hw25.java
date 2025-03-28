@@ -6,11 +6,7 @@ public class Hw25 {
 		int maxValue = 49;	//樂透最大號碼 1~79
 		int dislineNumber = 4;	//不喜歡的數字1~9
 		for(int i = minValue; i <= maxValue; i++) {
-			if(i < 10 && i != dislineNumber) {
-				System.out.println(i);
-			}else if( (i + (10 - dislineNumber)) % 10 == 0){
-				continue;
-			}else if( (i / 10) % dislineNumber == 0){
+			if(i % 10 == dislineNumber || i /10 == dislineNumber) {
 				continue;
 			}else {
 				System.out.println(i);
