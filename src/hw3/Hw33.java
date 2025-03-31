@@ -1,9 +1,11 @@
 package hw3;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hw33 {
+	
 	public static void main(String[] args) {
 		Hw33 a = new Hw33();
 		Scanner sc = new Scanner(System.in);
@@ -14,10 +16,11 @@ public class Hw33 {
 		System.out.print("請輸入你不喜歡的數字 1 ~ 9 ：");
 		int dislineNumber =sc.nextInt();
 
-
-//		System.out.println((maxValue-minValue)/10+1);
 		
+		//	定義陣列排數
 		int[][] lotto = new int[(maxValue-minValue)/10+3][7];
+		
+		
 		int sum = 0;
 		int col = 0;
 		int row = 0;
@@ -29,7 +32,6 @@ public class Hw33 {
 				lotto[col][row] = i;
 				sum++;
 				row++;
-				
 				if(row >= 7) {
 					row = 0;
 					col++;
@@ -41,7 +43,11 @@ public class Hw33 {
 		a.printLotto(lotto);
 		
 		System.out.println("共有 " + sum +" 個數字可選擇");
-	}
+		
+		System.out.println("===電腦選號號碼如下===");
+		a.randomLotto(lotto);
+		sc.close();
+		}
 	
 	
 	//列印樂透方法
@@ -58,6 +64,36 @@ public class Hw33 {
 		}
 	}
 	
+	
+	//樂透推薦號碼
+	public void randomLotto(int[][] data) {
+		int[] x =new int[6];
+		out:
+		while(true) {
+		for(int i = 0 ; i < 6 ; i ++){
+			while(true) {
+				int a = (int)(Math.random() * data.length);
+				int b = (int)(Math.random() * data[0].length);
+				int y = data[a][b];
+				if(y == 0) {
+					continue;
+				}
+				x[i] = y;
+				break;
+			}
+		}
+		Arrays.sort(x);
+		for(int i = 0 ; i<=4 ;i++) {
+		if(x[i] == x[i+1]) {
+			continue out;
+			}
+		}
+		break;
+		}
+		for(int i = 0 ; i<=5 ;i++) {
+			System.out.print(x[i] + "\t");
+		}
 	}
 	
+}
 	
