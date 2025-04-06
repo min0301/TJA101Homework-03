@@ -90,9 +90,16 @@ public class Hw33 {
 		}
 		break;
 		}
-		for(int i = 0 ; i<=5 ;i++) {
-			System.out.print(x[i] + "\t");
+		//普通迴圈
+//		for(int i = 0 ; i<=5 ;i++) {
+//			System.out.print(x[i] + "\t");
+//		}
+		
+		//for-each 迴圈
+		for(int i:x) {
+			System.out.print(i + "\t");
 		}
+		
 	}
 	
 }
