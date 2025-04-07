@@ -23,13 +23,10 @@ public class Hw46 {
 			}
 			student[max]=student[max]+1;
 		}
-		System.out.println("考最高分次數如下：");
-		for(int i = 1 ; i <= student.length ; i++) {
-			System.out.print(i + "號\t");
+		
+		for(int i = 0 ; i < student.length ; i++) {
+			System.out.println("學生 " + (i + 1) + " 最高分次數為： " + student[i]);
 		}
-		System.out.println();
-		for(int i : student) {
-			System.out.print(i + "次\t");
-		}	
+		
 	}
 }
