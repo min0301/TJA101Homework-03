@@ -10,9 +10,10 @@ public class Hw41 {
 		int x[]= {29, 100, 39, 41, 50, 8, 66, 77, 95, 15};
 		Arrays.sort(x);
 		
-		for(int i = 0 ; i < x.length ; i++) {
-			sum = x[i]+ sum;
+		for(int i : x) {
+			sum = i + sum;
 		}
+		
 		avg = sum / x.length;
 		System.out.println("平均值 = " + avg);
 		System.out.print("比平均值大的數字有 :");
