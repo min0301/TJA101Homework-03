@@ -27,7 +27,8 @@ public class Hw43 {
 				}
 			}
 		}
-		
+		int sum = a + e + i + o + u;
+		System.out.println("母音數量 = " + sum);
 		System.out.println("a 的數量 = " + a);
 		System.out.println("e 的數量 = " + e);
 		System.out.println("i 的數量 = " + i);
