@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Hw52 {
 	
+	
 	public void randAvg(int count ,int start, int end) {
 		
 		Random random = new Random();
@@ -28,6 +29,7 @@ public class Hw52 {
 		
 	}
 	
+	
 	public static void main(String[] args) {
 		
 		try(Scanner sc = new Scanner(System.in)){
@@ -39,10 +41,9 @@ public class Hw52 {
 				count = Integer.parseInt(countString[0]); 
 				if(countString.length == 1) {
 					break;
-			} else{
+				} else{
 				throw new IllegalArgumentException("請確認輸入格式");
-
-			}
+				}
 			}
 			while (true);
 
@@ -65,6 +66,7 @@ public class Hw52 {
 			} while (true);
 			
 		}catch(Exception e) {
+			System.out.println(e.getMessage());
 			System.out.println("輸入格式錯誤");
 		}
 
