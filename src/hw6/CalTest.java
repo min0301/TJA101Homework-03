@@ -1,6 +1,7 @@
 package hw6;
 
-import java.security.DrbgParameters.NextBytes;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CalTest {
@@ -59,6 +60,11 @@ public class CalTest {
 						throw new CalException("次方為負數，回傳結果不為整數！");
 					}
 					break;
+					
+				}catch(InputMismatchException e) {
+					System.out.println("輸入格式不正確");
+					System.out.println("請重新輸入");
+					sc.nextLine();
 					
 				}catch (Exception e) {
 					System.out.println(e);
