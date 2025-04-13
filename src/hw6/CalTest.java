@@ -28,7 +28,7 @@ public class CalTest {
 	
 	public static void main(String[] args) {
 		
-
+		System.out.println("===X的Y次方計算機===");
 		Calculator xy = new Calculator();
 		
 		try(Scanner sc = new Scanner(System.in)){	
@@ -43,6 +43,7 @@ public class CalTest {
 
 				}catch (Exception e) {
 					System.out.println("輸入格式不正確");
+					System.out.println("請重新輸入");
 					sc.nextLine();
 				}
 			} while (true);
@@ -61,13 +62,14 @@ public class CalTest {
 					
 				}catch (Exception e) {
 					System.out.println(e);
+					System.out.println("請重新輸入");
 					sc.nextLine();
 				}
 			} while (true);
 			
 			xy.powerXY(x,y);
 		}
-	
+
 	}
 
 }
