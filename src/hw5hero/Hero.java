@@ -1,3 +1,4 @@
+package hw5hero;
 
 public abstract class Hero {
 	// 省略 getter/setter...

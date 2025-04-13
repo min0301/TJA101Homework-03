@@ -1,3 +1,4 @@
+package hw5hero;
 
 public class ArrowMan extends Hero {
 	
@@ -23,4 +24,5 @@ public class ArrowMan extends Hero {
 	public void defend() {
 		System.out.println("做防禦動作");
 	}
+	
 }

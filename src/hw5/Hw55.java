@@ -6,7 +6,7 @@ public class Hw55 {
 	
 	public String genAuthCode() {
 		
-		String x = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890" ;
+		String x = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 		int count = 8;
 		char[] code = new char[count];
 		

@@ -1,3 +1,4 @@
+package hw5hero;
 
 public class RoleGameTest {
 
