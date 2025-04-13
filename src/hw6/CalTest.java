@@ -9,6 +9,7 @@ public class CalTest {
 		System.out.println("===X的Y次方計算機===");
 		Calculator xy = new Calculator();
 		
+		
 		int x,y;
 		try(Scanner sc = new Scanner(System.in)){
 			System.out.print("請輸入X的值：");
