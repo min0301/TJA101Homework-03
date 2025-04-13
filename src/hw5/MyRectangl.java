@@ -18,13 +18,17 @@ public class MyRectangl {
 		area = width * depth;
 		return area;
 	}
-	public void myRectangle() {
+	void myRectangle() {
 		
 	}
 	
-	public void myRectangle(double width , double depth) {
+	void myRectangle(double width , double depth) {
 		this.width = width;
 		this.depth = depth;
+	}
+	
+	void printArea() {
+		System.out.println("矩形面積為： " + getArea());
 	}
 
 }

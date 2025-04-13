@@ -9,9 +9,9 @@ public class MyRectangleMain {
 		
 		x.setWidth(10);
 		x.setDepth(20);
-		System.out.println(x.getArea());
+		x.printArea();
 		
 		x.myRectangle(10,20);
-		System.out.println(x.getArea());
+		x.printArea();
 	}
 }
