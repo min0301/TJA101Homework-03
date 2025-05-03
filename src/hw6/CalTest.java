@@ -5,6 +5,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CalTest {
+	
+	//方法1
 //	public static void main(String[] args) {
 //		
 //		
@@ -27,6 +29,7 @@ public class CalTest {
 	
 	
 	
+	//方法2
 	public static void main(String[] args) {
 		
 		System.out.println("===X的Y次方計算機===");
@@ -77,5 +80,7 @@ public class CalTest {
 		}
 
 	}
+	
+	
 
 }
